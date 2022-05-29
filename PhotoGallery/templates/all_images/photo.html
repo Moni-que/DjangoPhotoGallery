@@ -8,8 +8,9 @@
             <div class="col">
                 <a class="btn btn-info my-3" href="{% url 'gallery' %}">Go Back</a>
                 <div>
-                    <img src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+                    <img src="{{ photo.image.url }}" alt="">
                 </div>
+                <p>{% photo.image_description %}</p>
             </div>
         </div>
     </div>
