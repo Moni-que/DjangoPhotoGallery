@@ -4,8 +4,10 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns=[
-    re_path(r'^$',views.all_photos,name='newsToday'),
-    # re_path(r'^search/',views.search_results,name = 'search_results'),
+    re_path(r'^$',views.all_photos,name='gallery'),
+    re_path(r'^details',views.photo_details,name='photo_details'),
+    re_path(r'^search',views.search_results,name='search_results'),
+    re_path(r'^add',views.add,name='add'),
 ]
 
 if settings.DEBUG:
