@@ -8,7 +8,6 @@ def all_photos(request):
     date = dt.date.today()
     return render(request, 'all_images/gallery.html', {"date": date})
 
-
 def photo_details(request,past_date):
 
     try:
