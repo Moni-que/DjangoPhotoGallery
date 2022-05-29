@@ -11,43 +11,16 @@
                         Categories
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Food</li>
-                        <li class="list-group-item">Travel</li>
-                        <li class="list-group-item">Summer</li>
-                        <li class="list-group-item">Family</li>
+                        <li class="list-group-item">All</li>
+                        {% for category in categories %}
+                            <li class="list-group-item">{{ category.name }}</li>
+                        {% endfor %}
                         <a class="btn btn-block btn-info" href="{% url 'add' %}">Add Photo</a>
                     </ul>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card my-3">
-                            <img src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=400" class="image-thumbnail" alt="">
-                            <div class="card-body">
-                              <small>Category:Pets</small>
-                            </div>
-                            <a href="{% url 'photo_details' %}" class="btn btn-info btn-sm m-1">Show More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card my-3">
-                            <img src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=400" class="image-thumbnail" alt="">
-                            <div class="card-body">
-                              <small>Category:Pets</small>
-                            </div>
-                            <a href="{% url 'photo_details' %}" class="btn btn-info btn-sm m-1">Show More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card my-3">
-                            <img src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=400" class="image-thumbnail" alt="">
-                            <div class="card-body">
-                              <small>Category:Pets</small>
-                            </div>
-                            <a href="{% url 'photo_details' %}" class="btn btn-info btn-sm m-1">Show More</a>
-                        </div>
-                    </div>
                     <div class="col-md-4">
                         <div class="card my-3">
                             <img src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=400" class="image-thumbnail" alt="">
