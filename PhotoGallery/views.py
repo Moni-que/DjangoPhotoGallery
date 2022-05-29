@@ -4,11 +4,20 @@ from django.http  import HttpResponse
 import datetime as dt
 
 # Create your views here.
-# def welcome(request):
-#     return HttpResponse('Welcome to the Moringa Tribune')
-
-# def search_results(request):
-#     return render(request, 'all-images/search.html')
 
 def all_photos(request):
     return render(request, 'all_images/gallery.html')
+
+
+
+def photo_details(request):
+    date = dt.date.today()
+    return render(request, 'all_images/photo.html')
+
+
+def search_results(request):
+    return render(request, 'all_images/search.html')
+
+
+def add(request):
+    return render(request, 'all_images/add.html')
