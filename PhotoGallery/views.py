@@ -1,3 +1,4 @@
+from unicodedata import category
 from venv import create
 from django.shortcuts import render, redirect
 from django.http  import HttpResponse,Http404
@@ -7,9 +8,13 @@ from .models import Category, Image
 # Create your views here.
 
 def all_photos(request):
+    category = request.GET.get('category')
+    if category == None:
+        photos = Image.objects.all()
+    else:
+        photos = Image.objects.filter(image_category__name= category)
     date = dt.date.today()
     categories = Category.objects.all()
-    photos = Image.objects.all()
     context = { 'categories':  categories, 'photos': photos, 'date': date} 
     return render(request, 'all_images/gallery.html', context)
 
