@@ -22,4 +22,6 @@ def search_results(request):
 
 
 def add_photo(request):
-    return render(request, 'all_images/add.html')
+    categories = Category.objects.all()
+    context = { 'categories':  categories}
+    return render(request, 'all_images/add.html', context)
