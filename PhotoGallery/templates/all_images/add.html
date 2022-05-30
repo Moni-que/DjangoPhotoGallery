@@ -10,17 +10,19 @@
                 <div class="card">
                     <form action="">
                         <div class="form-group m-3">
-                            <label selected>Description</label>
-                            <input name="description" type="text" placeholder="Describe your photo" class="form-control">
+                            <label>Description</label>
+                            <input name="description" type="text" placeholder="Enter your description" class="form-control">
                         </div>
                         <div class="form-group m-3">
-                            <label selected>Select a Category</label>
+                            <label>Select a Category</label>
                             <select name="category" class="form-control">
-                                <option value="">Select a Category</option>
+                                {% for category in categories %}
+                                    <option value="{{ image_category.id }}">{{ category.name }}</option>
+                                {% endfor %}
                             </select>
-                        </div>="te
+                        </div>
                         <div class="form-group m-3">
-                            <label selected>Upload Image</label>
+                            <label>Upload Image</label>
                             <input name="image" type="file" class="form-control-file">
                         </div>
                     </form>
