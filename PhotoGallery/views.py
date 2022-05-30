@@ -13,7 +13,7 @@ def all_photos(request):
     return render(request, 'all_images/gallery.html', context)
 
 def photo_details(request):
-    photo = Image.objects.get(id = pk)
+    photo = Image.objects.get(id=pk)
     return render(request, 'all_images/photo.html', {'photo': photo})
 
 
