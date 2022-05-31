@@ -1,5 +1,3 @@
-from unicodedata import category
-from venv import create
 from django.shortcuts import render, redirect
 from django.http  import HttpResponse,Http404
 import datetime as dt
@@ -43,3 +41,5 @@ def add_photo(request):
         return redirect('gallery')
     context = { 'categories':  categories}
     return render(request, 'all_images/add.html', context)
+
+
