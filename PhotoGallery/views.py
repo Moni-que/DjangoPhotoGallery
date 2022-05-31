@@ -16,13 +16,9 @@ def all_photos(request):
     context = { 'categories':  categories, 'photos': photos, 'date': date} 
     return render(request, 'all_images/gallery.html', context)
 
-def photo_details(request):
+def photo_details(request,pk):
     photo = Image.objects.get(id=pk)
     return render(request, 'all_images/photo.html', {'photo': photo})
-
-
-def search_results(request):
-    return render(request, 'all_images/search.html')
 
 
 def add_photo(request):
@@ -43,3 +39,12 @@ def add_photo(request):
     return render(request, 'all_images/add.html', context)
 
 
+def search_results(request):
+    if 'Category' in request.GET and request.GET["Category"]:
+        search_term = request.GET.get("Category")
+        searched_categories = Image.search_by_category(search_term)
+        message =f"{search_term}"
+        return render(request, 'all_images/search.html', {"message":message, "categories":searched_categories})
+    else:
+        message ="You haven't searched for any term"
+        return render(request, 'all_images/search.html',{"message":message})

@@ -1,9 +1,11 @@
-h1{
-  color: green;
-}
-
-
 .image-thumbnail{
     height:200px;
     object-fit: cover;
+}
+.my-image-div{
+  height: 90vh;
+}
+.my-image{
+  max-height:100%;
+  max-width: 100%;
 }
