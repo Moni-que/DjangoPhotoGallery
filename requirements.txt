@@ -5,11 +5,12 @@ config==0.3.9
 distlib==0.3.4
 dj-database-url==0.5.0
 Django==4.0.4
+django-bootstrap3==21.2
 django-heroku==0.3.1
 filelock==3.7.0
 gunicorn==19.9.0
 Pillow==9.1.1
-pipenv==2022.5.2
+pkg_resources==0.0.0
 platformdirs==2.5.2
 psycopg2==2.9.3
 python-decouple==3.1
