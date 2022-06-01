@@ -1,0 +1,60 @@
+.mycontents{
+  background-color: black;
+  color: white;
+}
+.my-image-div{
+  height: 100vh;
+}
+hr{
+  color: red;
+}
+.my-image{
+  max-height:100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.myfooter{
+background-color: lightblue;
+padding: 10px;
+}
+.image-thumbnail{
+  height:50vh;
+  object-fit: cover;
+}
+.firstrow{
+  margin-bottom: 30px;
+}
+.showmorebutton{
+  margin-top: 10px;
+}
+.categoryname{
+  margin-top: 15px;
+}
+.mycolunm{
+  display: flex;
+  justify-content: center;
+}
+.mylink{
+  margin-top: 20px;
+}
+.addform{
+  height: 82vh;
+}
+.backbutton{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.thisscard{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.formcenter{
+  margin: auto;
+}
+.mybutton{
+  margin-bottom: 20px;
+}
