@@ -3,12 +3,13 @@
 {{ block.super}}
      
     <h3 class="text-center">Photos for {{date|date:"l d-F Y"}}</h3>
+    <hr>
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-header">
-                        Categories
+                       <p class="text-center">CATEGORIES</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><a href="{% url 'gallery' %}">All</a></li>
@@ -19,16 +20,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 mycolunm">
                 <div class="row">
                     {% for photo in photos %}
-                    <div class="col-md-4">
-                        <div class="card mx-3">
+                    <div class="col-md-4 firstrow">
+                        <div class="card mycard">
                             <img src="{{ photo.image.url }}" class="image-thumbnail" alt="">
                             <div class="card-body">
-                              <small>Category: {{ photo.image_category.name }}</small>
+                              <small class="categoryname">Category: {{ photo.image_category.name }}</small>
                             </div>
-                            <a href="{% url 'photo_details' photo.id %}" class="btn btn-info btn-sm mt-3">Show More</a>
+                            <a href="{% url 'photo_details' photo.id %}" class="btn btn-info btn-sm mt-3 showmorebutton">Show More</a>
                         </div>
                     </div>
                     {% empty %}
