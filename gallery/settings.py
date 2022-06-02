@@ -16,6 +16,18 @@ import dj_database_url
 import django_heroku
 from decouple import config,Csv
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+# adding config
+cloudinary.config( 
+  cloud_name = "YOUR_CLOUD_NAME", 
+  api_key = "YOUR_API_KEY", 
+  api_secret = "YOUR_API_SECRET" 
+)
+
 
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
@@ -72,6 +84,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'PhotoGallery',
     'bootstrap3',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [

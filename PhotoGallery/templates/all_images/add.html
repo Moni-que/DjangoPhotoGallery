@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-4 ">
                 <a class="btn btn-info backbutton" href="{% url 'gallery' %}">Go Back</a>
-                <div class="card thisscard">
+                <div class="thisscard">
                     <form class="formcenter" method="POST" action="" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="form-group m-3">
@@ -30,7 +30,6 @@
                             <label>Upload Image</label>
                             <input required name="image" type="file" class="form-control-file">
                         </div>
-
                         <button type="submit" class="btn btn-info mybutton">Submit</button>
                     </form>
                 </div>
