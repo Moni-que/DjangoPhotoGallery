@@ -20,12 +20,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-9 mycolunm">
+            <div class="col-md-9">
                 <div class="row">
                     {% for photo in photos %}
                     <div class="col-md-4 firstrow">
                         <div class="card mycard">
-                            <img src="{{ photo.image.url }}" class="image-thumbnail" alt="">
+                            <img src="{{ photo.image.url }}" class="image-thumbnail card-img-top" alt="">
                             <div class="card-body">
                               <small class="categoryname">Category: {{ photo.image_category.name }}</small>
                             </div>

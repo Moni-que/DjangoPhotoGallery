@@ -23,9 +23,9 @@ import cloudinary.api
 
 # adding config
 cloudinary.config( 
-  cloud_name = "YOUR_CLOUD_NAME", 
-  api_key = "YOUR_API_KEY", 
-  api_secret = "YOUR_API_SECRET" 
+  cloud_name = config('CLOUDINARY_CLOUD_NAME'),
+  api_key =  config('CLOUDINARY_API_KEY'),
+  api_secret =  config('CLOUDINARY_API_SECRET')
 )
 
 
