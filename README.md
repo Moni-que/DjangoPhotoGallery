@@ -1,5 +1,8 @@
 # DjangoPhotoGallery
 
+### Screenshot of the app
+![Screenshot from 2022-06-04 18-01-12](https://user-images.githubusercontent.com/93192319/172010323-650c1bff-ae42-4c6b-99b4-69e0c627851c.png)
+
 ### Table of Contents
 * Description
 * Minimum Viable Product
